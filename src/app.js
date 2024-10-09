@@ -1,26 +1,32 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path');
+const app = express();
 const signupController = require('./controllers/signupController');
 
-const app = express();
-const PORT = 3000;
-
-// Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('public')); // Serve static files from the public directory
-
-// Set view engine for EJS
+app.use(express.static('public'));
+// Set view engine to EJS
 app.set('view engine', 'ejs');
 
-// Define the root route
+// Set the views directory
+app.set('views', path.join(__dirname, 'views'));
+
+// Serve static files from the public directory
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Home route
 app.get('/', (req, res) => {
-    res.render('signup'); // Render the signup view
+    res.render('front'); // Render front.ejs
 });
 
-// Your signup route
+// Signup route
+app.get('/signup', (req, res) => {
+    res.render('signup'); // Render signup.ejs
+});
 app.post('/signup', signupController.signup);
-
-// Start the server
+// Start server
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });

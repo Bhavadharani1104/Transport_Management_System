@@ -1,12 +1,9 @@
 {
-<<<<<<< HEAD
   "name": "harishma_git",
-=======
-  "name": "ctms",
->>>>>>> main
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "node src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,13 +11,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-<<<<<<< HEAD
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.3",
-=======
->>>>>>> main
     "ejs": "^3.1.10",
-    "express": "^4.21.0"
+    "express": "^4.21.0",
+    "react-scripts": "^5.0.1"
   }
 }

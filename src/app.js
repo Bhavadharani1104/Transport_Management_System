@@ -19,6 +19,22 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
     res.render('front'); // Render front.ejs
 });
+app.get('/login', (req, res) => {
+    res.render('login', { error: null }); // Pass an empty error initially
+});
+
+// Handle login form submission
+app.post('/login', (req, res) => {
+    const { username, password } = req.body;
+
+    // Mock login logic (replace this with actual authentication)
+    if (username === 'admin' && password === 'password') {
+        res.send('Login successful!');
+    } else {
+        // Render login page with an error message
+        res.render('login', { error: 'Invalid username or password.' });
+    }
+});
 
 // Signup route
 app.get('/signup', (req, res) => {

@@ -82,37 +82,55 @@
                 width: 120px; /* Adjust width for smaller screens */
                 height: 120px; /* Adjust height for smaller screens */
             }
-        }
+        } 
     </style>
 </head>
 <body>
     <div class="container">
         <h1 style="width: 100%; text-align: center; color:#4e54c8;">Welcome to the Dashboard</h1>
-        <div class="card">
-            <img src="/bus.png" alt="Bus Image">
-            <h2>Bus 1</h2>
-        </div>
-        <div class="card">
-            <img src="/bus.png" alt="Bus Image">
-            <h2>Bus 2</h2>
-        </div>
-        <div class="card">
-            <img src="/bus.png" alt="Bus Image">
-            <h2>Bus 3</h2>
-        </div>
-        <div class="card">
-            <img src="/bus.png" alt="Bus Image">
-            <h2>Bus 4</h2>
-        </div>
-        <div class="card">
-            <img src="/bus.png" alt="Bus Image">
-            <h2>Bus 5</h2>
-        </div>
-        <div class="card">
-            <img src="/bus.png" alt="Bus Image">
-            <h2>Bus 6</h2>
-        </div>
-        
+
+        <!-- Each card links to the bus.ejs page with the bus number as a parameter -->
+        <a href="/bus-details?busNumber=1">
+            <div class="card">
+                <img src="/bus.png" alt="Bus Image">
+                <h2>Bus 1</h2>
+            </div>
+        </a>
+
+        <a href="/bus-details?busNumber=2">
+            <div class="card">
+                <img src="/bus.png" alt="Bus Image">
+                <h2>Bus 2</h2>
+            </div>
+        </a>
+
+        <a href="/bus-details?busNumber=3">
+            <div class="card">
+                <img src="/bus.png" alt="Bus Image">
+                <h2>Bus 3</h2>
+            </div>
+        </a>
+
+        <a href="/bus-details?busNumber=4">
+            <div class="card">
+                <img src="/bus.png" alt="Bus Image">
+                <h2>Bus 4</h2>
+            </div>
+        </a>
+
+        <a href="/bus-details?busNumber=5">
+            <div class="card">
+                <img src="/bus.png" alt="Bus Image">
+                <h2>Bus 5</h2>
+            </div>
+        </a>
+
+        <a href="/bus-details?busNumber=6">
+            <div class="card">
+                <img src="/bus.png" alt="Bus Image">
+                <h2>Bus 6</h2>
+            </div>
+        </a>
     </div>
 </body>
 </html>
